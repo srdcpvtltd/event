@@ -1,0 +1,15 @@
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" crossorigin="anonymous"></script>
+<script>
+
+    var _id=<?=$_GET['id']?>;
+    $.ajax({
+        type:'get',
+        url:'processTicket.php',
+        dataType:'json',
+        data:{id:_id},
+        success:function(res){
+            console.log(res);
+          }
+      });
+    
